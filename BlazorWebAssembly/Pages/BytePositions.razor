@@ -1,0 +1,27 @@
+﻿@page "/byte"
+<h3>BytePositions</h3>
+
+<h3>ByteFounder</h3>
+<!--блок вывода информации-->
+
+<input type="button" name="test" hidden="!@isLoading">
+<input type="search" @bind="searchString" />
+<button @onclick="FindPositions">Найти</button>
+<input class="field" type="search" readonly @bind="bazaCount" />
+<table>
+    @foreach (var item in resultList)
+    {
+        <tr>
+            <td>
+                <input type="text" width="150" @bind="item.Name" />
+            </td>
+            <td>
+                <input type="text" @bind="item.SiteCategory" />
+            </td>
+            <td>
+                <input type="text" @bind="item.Uid" />
+            </td>
+
+        </tr>
+    }
+</table>
