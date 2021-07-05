@@ -28,7 +28,6 @@ jobs:
       with:
         branch: gh-pages
         folder: release/wwwroot
-        
     - name: Change base-tag in index.html from / to BlazorWebAssembly
       run: sed -i 's/<base href="\/" \/>/<base href="\/BlazorWebAssembly\/" \/>/g' release/wwwroot/index.html
       
